@@ -70,6 +70,8 @@ public class Java05 {
 		//문자열은 숫자 연산이 불가능하다
 		str3 = str1 + str2;
 		System.out.println(str3);
+		
+		System.out.println("100" + 200);  // 문자열과 기본타입 연산 시 문자열로 자동 형 변환됨!
 	}
 
 }
