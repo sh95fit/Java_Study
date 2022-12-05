@@ -1,5 +1,7 @@
 package JavaStudy01;
 
+import java.util.Arrays;
+
 /*
  배열
  하나의 변수 이름으로 여러 개의 데이터를 저장
@@ -249,6 +251,80 @@ public class Java14 {
 			System.out.println("arr4["+i+"] : "+arr4[i]);
 		}
 		
+		System.out.println("\n\nArrays 함수 사용\n\n");
+		
+		arr3 = new int[] {10,20,30};
+		arr4 = new int[3];
+		
+		System.out.println("------원본 배열 출력------");
+		
+		for (int i=0; i<arr3.length; i++) {
+			System.out.println("arr3["+i+"] : "+arr3[i]);
+		}
+		for (int i=0; i<arr4.length; i++) {
+			System.out.println("arr4["+i+"] : "+arr4[i]);
+		}
+
+		arr4 = arr3;
+		
+		System.out.println("---arr4에 arr3 단순 대입---");
+		
+		for (int i=0; i<arr3.length; i++) {
+			System.out.println("arr3["+i+"] : "+arr3[i]);
+		}
+		for (int i=0; i<arr4.length; i++) {
+			System.out.println("arr4["+i+"] : "+arr4[i]);
+		}
+		
+		for (int i=0; i<arr3.length; i++) {
+			arr3[i] = arr3[i]*10;
+		}
+		
+		System.out.println("---arr3의 요소 변경 후 ---");
+		
+		for (int i=0; i<arr3.length; i++) {
+			System.out.println("arr3["+i+"] : "+arr3[i]);
+		}
+		for (int i=0; i<arr4.length; i++) {
+			System.out.println("arr4["+i+"] : "+arr4[i]);
+		}
+		
+		arr3 = new int[] {10,20,30};
+		arr4 = new int[3];
+		
+		System.out.println("------원본 배열 출력------");
+		
+		for (int i=0; i<arr3.length; i++) {
+			System.out.println("arr3["+i+"] : "+arr3[i]);
+		}
+		for (int i=0; i<arr4.length; i++) {
+			System.out.println("arr4["+i+"] : "+arr4[i]);
+		}
+		
+		arr4 = Arrays.copyOf(arr3, arr3.length);
+
+		System.out.println("---Arrays.copyOf()를 사용한 배열 복사---");
+		// Arrays.copyOf(원본배열, 원본배열크기)
+		
+		for (int i=0; i<arr3.length; i++) {
+			System.out.println("arr3["+i+"] : "+arr3[i]);
+		}
+		for (int i=0; i<arr4.length; i++) {
+			System.out.println("arr4["+i+"] : "+arr4[i]);
+		}
+		
+		for (int i=0; i<arr3.length; i++) {
+			arr3[i] = arr3[i]*10;
+		}
+		
+		System.out.println("---arr3의 요소 변경 후 ---");
+		
+		for (int i=0; i<arr3.length; i++) {
+			System.out.println("arr3["+i+"] : "+arr3[i]);
+		}
+		for (int i=0; i<arr4.length; i++) {
+			System.out.println("arr4["+i+"] : "+arr4[i]);
+		}
 	}
 
 }
